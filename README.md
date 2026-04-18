@@ -10,7 +10,42 @@ Hand off a task to clawy on Discord by creating a GitHub issue and posting a for
 
 See `skills/ping-clawy/SKILL.md`.
 
-## Installing skills
+## Quick start (with just)
+
+[just](https://github.com/casey/just) is a command runner. Install it via `brew install just`, `cargo install just`, or see the [just docs](https://just.systems/man/en/).
+
+```bash
+# Clone the repo
+git clone https://github.com/hadgd/agent-ops.git ~/code/agent-ops
+cd ~/code/agent-ops
+
+# See available skills
+just available
+
+# Install a skill (symlinks into ~/.claude/skills/)
+just install-skill ping-clawy
+
+# Verify it's installed
+just list-skills
+
+# Pull updates (symlinked skills update automatically)
+just update
+
+# Remove a skill
+just uninstall-skill ping-clawy
+```
+
+### VS Code
+
+Open this repo in VS Code and run tasks from the command palette (`Cmd+Shift+P` → "Tasks: Run Task"):
+
+- **Install skill: ping-clawy**
+- **Update agent-ops**
+- **List installed skills**
+
+Requires `just` to be on your PATH.
+
+## Manual install (no just required)
 
 ### In Claude.ai (web or desktop)
 
@@ -42,6 +77,8 @@ ln -s ~/code/agent-ops/skills/ping-clawy ~/.claude/skills/ping-clawy
 
 ## Updating
 
-Edit the skill files in this repo, commit, push. Then in each install location, pull or re-upload.
+If you used `just install-skill` (symlink), just run `just update` — skills update in place.
+
+If you copied files manually, pull or re-upload in each install location.
 
 The source of truth is this repo. Local copies are disposable.
