@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install skill: ping-clawy",
+      "type": "shell",
+      "command": "just install-skill ping-clawy",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Uninstall skill: ping-clawy",
+      "type": "shell",
+      "command": "just uninstall-skill ping-clawy",
+      "problemMatcher": []
+    },
+    {
+      "label": "List installed skills",
+      "type": "shell",
+      "command": "just list-skills",
+      "problemMatcher": []
+    },
+    {
+      "label": "Update agent-ops",
+      "type": "shell",
+      "command": "just update",
+      "problemMatcher": []
+    },
+    {
+      "label": "Show available skills",
+      "type": "shell",
+      "command": "just available",
+      "problemMatcher": []
+    }
+  ]
+}
