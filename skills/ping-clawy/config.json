@@ -1,0 +1,16 @@
+{
+  "discord": {
+    "channel_id": "1464873724011610295",
+    "clawy_user_id": "1464872378935803968",
+    "server_id": "1418281090455441662"
+  },
+  "github": {
+    "allowed_repo_owners": ["hadgd"],
+    "default_owner": "hadgd"
+  },
+  "message": {
+    "max_length": 400,
+    "ascii_only": true,
+    "single_line": true
+  }
+}
